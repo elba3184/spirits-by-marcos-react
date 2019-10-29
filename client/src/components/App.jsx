@@ -25,9 +25,9 @@ export default class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">MERN Boilerplate</h1>
-          <NavLink to="/" exact>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          {/* <h1 className="App-title">Spritis by Marcos</h1> */}
+          <NavLink to="/login" exact>
             Home
           </NavLink>
           <NavLink to="/countries">Countries</NavLink>

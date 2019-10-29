@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../../api'
+import '../../stylesheets/login.scss'
 
 export default class Login extends Component {
   constructor(props) {
@@ -33,6 +34,7 @@ export default class Login extends Component {
     return (
       <div className="Login">
         <h2>Login</h2>
+        <h3>I want this to be the first page that is visited</h3>
         <form>
           Username:{' '}
           <input
