@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 
-export default class Countries extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-    }
-  }
+class LiquorDetails extends Component {
+
   render() {
     return (
-      <div className="Countries">
+      <div className="details">
         <h1>In Details Liquor</h1>
       </div>
     )
   }
 }
+
+export default LiquorDetails;

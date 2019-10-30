@@ -20,18 +20,18 @@ class Navbar extends Component {
       <div className="nav-bar">
         <div className="nav-links">
           <div className="nav-left">
-          <NavLink to="/" exact>Home</NavLink>
-          <NavLink to="/">Vendors</NavLink>
-          <NavLink to="/">Liquor</NavLink>
+            <NavLink to="/" exact>Home</NavLink>
+            <NavLink to="/">Vendors</NavLink>
+            <NavLink to="/">Liquor</NavLink>
           </div>
           <div className="nav-right">
-          {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-          {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-          {api.isLoggedIn() && (
-            <Link to="/" onClick={e => this.handleLogoutClick(e)}>
-              Logout
+            {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
+            {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
+            {api.isLoggedIn() && (
+              <Link to="/" onClick={e => this.handleLogoutClick(e)}>
+                Logout
         </Link>
-          )}
+            )}
           </div>
         </div>
         {/* <NavLink to="/secret">Secret</NavLink> */}

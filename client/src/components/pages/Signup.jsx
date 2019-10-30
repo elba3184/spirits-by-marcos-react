@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import api from '../../api'
 
-export default class Signup extends Component {
+class Signup extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -73,3 +73,5 @@ export default class Signup extends Component {
     )
   }
 }
+
+export default Signup;

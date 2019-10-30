@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import api from '../../api'
 
-export default class Secret extends Component {
+class Secret extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -29,3 +29,5 @@ export default class Secret extends Component {
       .catch(err => this.setState({ message: err.toString() }))
   }
 }
+
+export default Secret;

@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 
-export default class Countries extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-    }
-  }
+class UpdateLiquor extends Component {
+
   render() {
     return (
       <div className="Countries">
@@ -14,3 +10,5 @@ export default class Countries extends Component {
     )
   }
 }
+
+export default UpdateLiquor;

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import api from '../../api'
 import '../../stylesheets/login.scss'
+import Home from './Home'
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -68,3 +69,5 @@ export default class Login extends Component {
     )
   }
 }
+
+export default Login;
