@@ -21,29 +21,34 @@ $vividCerulean: rgba(0, 168, 232, 1);
   height: 65px;
   left: 0px;
   top: 0px;
-  // padding: 20px;
   background: #1C4A6B;
-  max-width:100%;
-  // border: 2px solid red;
 
+  .nav-links {
+    list-style-type: none;
+    padding-bottom: 65px;
+  }
   .nav-links a{
     color: white;
     text-decoration: none;
     padding: 10px;
   }
 
-  .nav-right a{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+  .nav-left{
+    float: left;
+    padding-top: 20px;
   }
   
+  .nav-left a {
+    font-family: Roboto;
+    font-size: 18px;
+  }
 
+  .nav-right {
+    float: right;
+    padding-top: 20px;
+  }
   .nav-right a{
     font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
   }
 }
