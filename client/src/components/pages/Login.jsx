@@ -32,7 +32,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="Login">
+      <div className="login-page">
         <h2>Login</h2>
         <h3>I want this to be the first page that is visited</h3>
         <form>
