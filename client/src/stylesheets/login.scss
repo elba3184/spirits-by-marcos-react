@@ -16,5 +16,60 @@ $vividCerulean: rgba(0, 168, 232, 1);
 // ----------------------------------------
 
 .login-page {
-  
+  width: 100vw;
+  justify-content: center;
+
+  .login-box {
+    margin: 80px auto;
+    width: 450px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #003459;
+    opacity: 0.89;
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+
+  .login-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+
+    h2 {
+      font-size: 20pt;
+    }
+    
+    form h3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 5px;
+    }
+
+    .login-username, .login-password {
+      width: 150px;
+      height: 15px; 
+      background: #FFFFFF;
+      box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.39);
+      border-radius: 4px;
+      transform: matrix(1, -0.01, 0, 1, 0, 0);
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      width: 64px;
+      height: 29px;
+      background: rgba(255, 255, 255, 0.86);
+      border-radius: 7px;
+    }
+  }
+
 }

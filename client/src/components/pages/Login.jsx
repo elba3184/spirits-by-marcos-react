@@ -33,30 +33,37 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login-page">
-        <h2>Login</h2>
-        <h3>I want this to be the first page that is visited</h3>
-        <form>
-          Username:{' '}
-          <input
-            type="text"
-            value={this.state.username}
-            name="username"
-            onChange={this.handleInputChange}
-          />{' '}
-          <br />
-          Password:{' '}
-          <input
-            type="password"
-            value={this.state.password}
-            name="password"
-            onChange={this.handleInputChange}
-          />{' '}
-          <br />
-          <button onClick={e => this.handleClick(e)}>Login</button>
-        </form>
-        {this.state.message && (
-          <div className="info info-danger">{this.state.message}</div>
-        )}
+        <div className="login-box">
+          <div className="login-content">
+            <h2>Login</h2>
+            <form>
+              <h3>Username{' '}</h3>
+              <br/>
+              <input
+                className="login-username"
+                type="text"
+                value={this.state.username}
+                name="username"
+                onChange={this.handleInputChange}
+              />{' '}
+              <br />
+              <h3>Password{' '}</h3>
+              <br/>
+              <input
+                className="login-password"
+                type="password"
+                value={this.state.password}
+                name="password"
+                onChange={this.handleInputChange}
+              />{' '}
+              <br />
+              <button onClick={e => this.handleClick(e)}>Login</button>
+            </form>
+            {this.state.message && (
+              <div className="info info-danger">{this.state.message}</div>
+            )}
+          </div>
+        </div>
       </div>
     )
   }
