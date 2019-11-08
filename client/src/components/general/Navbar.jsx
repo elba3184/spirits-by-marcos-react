@@ -1,18 +1,31 @@
 import React, { Component } from 'react'
-import { Route, Link, NavLink, Switch } from 'react-router-dom'
+import { BrowserRouter as Switch, Route, NavLink, Link } from 'react-router-dom'
 import Home from '../pages/Home'
-import Vendors from '../vendors/AllVendors'
-import Liquor from '../liquor/AllLiquor'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import api from '../../api'
 import '../../stylesheets/navbar.scss'
 
-
 class Navbar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: null
+    }
+  }
+  componentDidMount() {
+    this.checkLogin()
+  }
+
+  checkLogin = () => {
+    api.checkLogin().then(user => {
+      console.log("the user", user)
+      this.setState({ user })
+    })
+  }
 
   handleLogoutClick(e) {
-    api.logout()
+    api.logout().then(this.checkLogin)
   }
 
   render() {
@@ -21,28 +34,28 @@ class Navbar extends Component {
         <div className="nav-links">
           <div className="nav-left">
             <NavLink to="/" exact>Home</NavLink>
-            <NavLink to="/">Vendors</NavLink>
-            <NavLink to="/">Liquor</NavLink>
+            <NavLink to="/vendors">Vendors</NavLink>
+            <NavLink to="/liquor">Liquor</NavLink>
           </div>
+
           <div className="nav-right">
-            {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-            {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-            {api.isLoggedIn() && (
-              <Link to="/" onClick={e => this.handleLogoutClick(e)}>
-                Logout
-        </Link>
-            )}
+            {!api.isLoggedIn() && <Link className="nav-link" to="/signup">
+              <li className="nav-item active">Signup</li>
+            </Link>}
+            {!api.isLoggedIn() && <Link className="nav-link" to="/login">
+              <li className="nav-item">Login</li>
+            </Link>}
+            {api.isLoggedIn() && <Link className="nav-link" to="/" onClick={e => this.handleLogoutClick(e)}>
+              <li className="nav-item active">Logout</li>
+            </Link>}
           </div>
         </div>
-        {/* <NavLink to="/secret">Secret</NavLink> */}
+
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/vendors" component={Vendors} />
-          <Route path="/liquor" component={Liquor} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} />
-          {/* <Route path="/secret" component={Secret} /> */}
-          <Route render={() => <h2>404</h2>} />
+          <Route path="/" exact component={(props) => <Home {...props} />} />
+          <Route path="/signup" component={(props) => <Signup checkLogin={this.checkLogin} {...props} />} />
+          <Route path="/login" component={(props) => < Login checkLogin={this.checkLogin} {...props} />} />
+          {/* <Route render={() => <h2>404</h2>} /> */}
         </Switch>
       </div>
     )
@@ -50,3 +63,13 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+{/* {api.isLoggedIn() && <Link className="nav-link" to="/allUsers">
+<li className="nav-item active">All Users</li>
+</Link>} */}
+{/* {api.isLoggedIn() && <Link className="nav-link" to="/profile">
+<li className="nav-item active">Profile</li>
+</Link>} */}
+
+{/* <Route path="/profile" component={(props) => < Profile checkLogin={this.checkLogin} {...props} />} /> */ }
+{/* <Route path="/allUsers" component={(props) => < People {...props} />} /> */ }
