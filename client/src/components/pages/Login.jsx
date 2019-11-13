@@ -28,7 +28,7 @@ export default class Login extends Component {
       .then(result => {
         console.log('SUCCESS!')
         this.props.checkLogin()
-        this.props.history.push('/allUsers')
+        this.props.history.push('/')
       })
       .catch(err => this.setState({ message: err.toString() }))
   }

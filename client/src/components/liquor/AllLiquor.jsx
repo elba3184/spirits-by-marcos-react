@@ -4,7 +4,7 @@ class Liquor extends Component {
 
   render() {
     return (
-      <div className="Countries">
+      <div className="liquor">
         <h1>In all Liquor</h1>
       </div>
     )

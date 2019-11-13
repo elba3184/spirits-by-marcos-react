@@ -4,7 +4,7 @@ class Vendor extends Component {
 
   render() {
     return (
-      <div className="Countries">
+      <div className="vendors">
         <h1>In All Vendors</h1>
       </div>
     )
