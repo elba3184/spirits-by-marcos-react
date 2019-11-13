@@ -63,13 +63,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
-{/* {api.isLoggedIn() && <Link className="nav-link" to="/allUsers">
-<li className="nav-item active">All Users</li>
-</Link>} */}
-{/* {api.isLoggedIn() && <Link className="nav-link" to="/profile">
-<li className="nav-item active">Profile</li>
-</Link>} */}
-
-{/* <Route path="/profile" component={(props) => < Profile checkLogin={this.checkLogin} {...props} />} /> */ }
-{/* <Route path="/allUsers" component={(props) => < People {...props} />} /> */ }

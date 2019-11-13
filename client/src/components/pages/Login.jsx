@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+// import { Link } from 'react-router-dom'
 import api from '../../api'
 import '../../stylesheets/login.scss'
-import Home from './Home'
 
-class Login extends Component {
+export default class Login extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -26,48 +27,48 @@ class Login extends Component {
       .login(this.state.username, this.state.password)
       .then(result => {
         console.log('SUCCESS!')
-        this.props.history.push('/') // Redirect to the home page
+        this.props.checkLogin()
+        this.props.history.push('/allUsers')
       })
       .catch(err => this.setState({ message: err.toString() }))
   }
 
   render() {
     return (
+
       <div className="login-page">
-        <div className="login-box">
-          <div className="login-content">
-            <h2>Login</h2>
-            <form>
-              <h3>Username{' '}</h3>
-              <br/>
-              <input
-                className="login-username"
-                type="text"
-                value={this.state.username}
-                name="username"
-                onChange={this.handleInputChange}
-              />{' '}
-              <br />
-              <h3>Password{' '}</h3>
-              <br/>
-              <input
-                className="login-password"
-                type="password"
-                value={this.state.password}
-                name="password"
-                onChange={this.handleInputChange}
-              />{' '}
-              <br />
-              <button onClick={e => this.handleClick(e)}>Login</button>
-            </form>
-            {this.state.message && (
-              <div className="info info-danger">{this.state.message}</div>
-            )}
-          </div>
-        </div>
-      </div>
+             <div className="login-box">
+                <div className="login-content">
+                 <h2>Login</h2>
+                <form>
+                  <h3>Username{' '}</h3>
+                  <br/>
+               <input
+                      className="login-username"
+                      type="text"
+                      value={this.state.username}
+                      name="username"
+                      onChange={this.handleInputChange}
+                    />{' '}
+                    <br />
+                    <h3>Password{' '}</h3>
+                    <br/>
+                    <input
+                      className="login-password"
+                      type="password"
+                      value={this.state.password}
+                      name="password"
+                      onChange={this.handleInputChange}
+                    />{' '}
+                    <br />
+                    <button onClick={e => this.handleClick(e)}>Login</button>
+                  </form>
+                  {this.state.message && (
+                    <div className="info info-danger">{this.state.message}</div>
+                  )}
+                </div>
+              </div>
+            </div>
     )
   }
 }
-
-export default Login;
