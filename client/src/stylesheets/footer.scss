@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #0593B5;
+  color: white;
+  font-size: 18pt;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 40px;
+    width: 40px;
+  }
+  .resources {
+  font-size: 10px;
+  color: white;
+  }
+}

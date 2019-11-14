@@ -27,7 +27,6 @@ body {
 }
 
 .App {
-
   footer {
       display: flex;
       position: absolute;
@@ -38,6 +37,18 @@ body {
       justify-content: center;
       align-items: center;
   }
+  img {
+    height: 40px;
+    width: 40px;
+  }
+  footer p {
+    color: white;
+  }
+  .resources {
+    font-size: 10px;
+    color: white;
+  }
+  
 }
 
 //-----------------------------------------//

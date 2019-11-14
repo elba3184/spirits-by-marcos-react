@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import '../../stylesheets/index.scss'
 
 
@@ -10,9 +11,7 @@ class App extends Component {
         <header>
           <Navbar />
         </header>
-        <footer>
-          designed by elba
-        </footer>
+        <Footer />
       </div>
     )
   }

@@ -3,6 +3,8 @@ import { Switch, Route, NavLink, Link } from 'react-router-dom'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
+import Vendors from '../vendors/AllVendors'
+import Liquor from '../liquor/AllLiquor'
 import api from '../../api'
 import '../../stylesheets/navbar.scss'
 
@@ -33,9 +35,10 @@ class Navbar extends Component {
       <div className="nav-bar">
         <div className="nav-links">
           <div className="nav-left">
+            <NavLink to="/" exact>LOGO</NavLink>
             <NavLink to="/" exact>Home</NavLink>
-            <NavLink to="/vendors">Vendors</NavLink>
             <NavLink to="/liquor">Liquor</NavLink>
+            <NavLink to="/vendors">Vendors</NavLink>
           </div>
 
           <div className="nav-right">
@@ -48,11 +51,13 @@ class Navbar extends Component {
             {api.isLoggedIn() && <Link className="nav-link" to="/" onClick={e => this.handleLogoutClick(e)}>
               <li className="nav-item">Logout</li>
             </Link>}
-        </div>
+          </div>
         </div>
 
         <Switch>
           <Route path="/" exact component={(props) => <Home {...props} />} />
+          <Route path="/vendors" exact component={(props) => <Vendors {...props} />} />
+          <Route path="/liquor" exact component={(props) => <Liquor {...props} />} />
           <Route path="/signup" component={(props) => <Signup checkLogin={this.checkLogin} {...props} />} />
           <Route path="/login" component={(props) => < Login checkLogin={this.checkLogin} {...props} />} />
         </Switch>

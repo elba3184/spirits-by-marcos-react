@@ -1,8 +1,14 @@
 .home {
   background-image: url('/images/home-background.jpg');
   background-size: cover;
-  height: 89vh;
+  height: 85vh;
   filter: grayscale(40%);
   color: white;
   text-align: center;
+}
+
+.home h2 {
+  padding-top: 20vh;
+  font-size: 5em;
+  text-shadow: 20px 8px 15px #000000;
 }
