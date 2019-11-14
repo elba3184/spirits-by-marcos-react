@@ -12,7 +12,7 @@ class Footer extends Component {
         </div>
         <div className="footer-resources">
           Website designed by @elbachimilio
-         Resources:
+          Resources:
           <p className="resources"> GitHub Icon made by
           <a href="https://www.flaticon.com/authors/dave-gandy" target="_blank">Dave Gandy</a>
             from www.flaticon.com |
