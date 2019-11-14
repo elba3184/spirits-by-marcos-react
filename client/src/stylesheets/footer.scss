@@ -5,15 +5,23 @@
   width: 100%;
   background: #0593B5;
   color: white;
-  font-size: 18pt;
+  font-size: 10pt;
   justify-content: center;
   align-items: center;
-  img {
-    height: 40px;
-    width: 40px;
+  flex-direction: column;
+  .footer-icons {
+    .github, .linkedin, .gmail {
+      padding: 10px 20px;
+    }
+    img {
+      height: 25px;
+      width: 25px;
+    }
   }
+  
   .resources {
-  font-size: 10px;
+  display: inline;
+  font-size: 10pt;
   color: white;
   }
 }
