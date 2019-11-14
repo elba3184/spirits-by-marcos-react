@@ -3,8 +3,6 @@ const passport = require('passport')
 const router = express.Router()
 const User = require('../models/User')
 
-
-console.log('go')
 // Bcrypt to encrypt passwords
 const bcrypt = require('bcrypt')
 const bcryptSalt = 10
@@ -46,12 +44,6 @@ router.post('/signup', (req, res, next) => {
       const newUser = new User({
         username,
         password: hashPass,
-        // first_name,
-        // last_name,
-        // email,
-        // userType,
-        // bio,
-        // imageUrl
       })
       return newUser.save()
     })
@@ -69,7 +61,6 @@ router.post('/signup', (req, res, next) => {
 })
 
 router.post('/login', (req, res, next) => {
-  console.log('trying to log in <<<<<<<<<<')
   const {
     username,
     password

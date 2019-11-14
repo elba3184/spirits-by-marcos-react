@@ -22,33 +22,34 @@ $vividCerulean: rgba(0, 168, 232, 1);
   left: 0px;
   top: 0px;
   background: #1C4A6B;
-
   .nav-links {
     list-style-type: none;
-    padding-bottom: 65px;
+    padding-bottom: 60px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
   }
   .nav-links a{
     color: white;
     text-decoration: none;
-    padding: 0px;
+    padding: 0 15px;
   }
-
   .nav-left{
     float: left;
     padding-top: 20px;
   }
-  
-  .nav-left a {
-    font-family: Roboto;
+  .nav-left a{
+    font-family: Roboto, Arial,sans-serif;
     font-size: 18px;
   }
-
   .nav-right {
     float: right;
-    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
   }
   .nav-right a{
-    font-family: Roboto;
+    font-family: Roboto, Arial,sans-serif;
     font-size: 18px;
   }
 }

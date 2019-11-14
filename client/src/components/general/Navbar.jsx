@@ -40,22 +40,21 @@ class Navbar extends Component {
 
           <div className="nav-right">
             {!api.isLoggedIn() && <Link className="nav-link" to="/signup">
-              <li className="nav-item active">Signup</li>
+              <li className="nav-item">Signup</li>
             </Link>}
             {!api.isLoggedIn() && <Link className="nav-link" to="/login">
               <li className="nav-item">Login</li>
             </Link>}
             {api.isLoggedIn() && <Link className="nav-link" to="/" onClick={e => this.handleLogoutClick(e)}>
-              <li className="nav-item active">Logout</li>
+              <li className="nav-item">Logout</li>
             </Link>}
-          </div>
+        </div>
         </div>
 
         <Switch>
           <Route path="/" exact component={(props) => <Home {...props} />} />
           <Route path="/signup" component={(props) => <Signup checkLogin={this.checkLogin} {...props} />} />
           <Route path="/login" component={(props) => < Login checkLogin={this.checkLogin} {...props} />} />
-          {/* <Route render={() => <h2>404</h2>} /> */}
         </Switch>
       </div>
     )
