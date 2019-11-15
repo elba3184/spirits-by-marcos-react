@@ -1,14 +1,36 @@
+// --------------------
+// Definition of variables
+$white: rgba(255, 255, 255, 1);
+$eerieBlack: rgba(30, 30, 29, 1);
+$prussianBlue: rgba(0, 52, 89, 1);
+$lightPrussian: rgba(0, 52, 89, 1);
+$cerulean: rgba(0, 126, 167, 1);
+$vividCerulean: rgba(0, 168, 232, 1);
+
+// COLOR SCHEMA /* RGB */
+// $color1: rgba(255, 255, 255, 1); //white
+// $color2: rgba(30, 30, 29, 1); //eerie black
+// $color3: rgba(0, 52, 89, 1); //prussian blue
+// $color4: rgba(0, 126, 167, 1); //cerulean
+// $color5: rgba(0, 168, 232, 1); //vivid cerulean
+// ----------------------------------------
+
+//-----------------------------------------//
+//                Footer                   //
+//-----------------------------------------//
+
 .footer {
-  display: flex;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   bottom: 0;
   width: 100%;
   background: #0593B5;
   color: white;
   font-size: 10pt;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+ 
   .footer-icons {
     .github, .linkedin, .gmail {
       padding: 10px 20px;
@@ -18,10 +40,13 @@
       width: 25px;
     }
   }
-  
   .resources {
   display: inline;
   font-size: 10pt;
   color: white;
   }
 }
+
+//-----------------------------------------//
+//             END of Footer               //
+//-----------------------------------------//

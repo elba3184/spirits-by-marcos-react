@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { log } from 'util'
+// import { log } from 'util'
 import serverUrl from '../src/configServer'
 // import Unsplash from 'unsplash-js';
 const path = require('path')
